@@ -1,0 +1,5 @@
+Revision history for Sentry-Log-Raven
+
+1.00    Date/time
+        First version, with support for SSL and v4 of the Sentry API.
+
