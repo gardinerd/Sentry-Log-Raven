@@ -6,7 +6,7 @@ Sentry::Log::Raven - sending exception log messages to Sentry.
 
 =cut
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 
 =head1 SYNOPSIS
@@ -100,7 +100,7 @@ Send message to Sentry server.
     'level'       => "Error level",                         # default 'error'
     'platform'    => "Platform name",                       # default 'perl',
     'culprit'     => "Module or/and function raised error", # default ""
-    'tags'        => "Arrayref of tags",                    # default []
+    'tags'        => "Hashref of tags",                     # default {}
     'server_name' => "Server name where error occured",     # current host name is default
     'modules'     => "list of relevant modules",
     'extra'       => "extra params described below"
@@ -166,8 +166,8 @@ sub buildMessage {
         'logger'      => $params->{'logger'} || 'root',
         'platform'    => $params->{'platform'} || 'perl',
         'culprit'     => $params->{'culprit'} || "",
-        'tags'        => $params->{'tags'} || [],
-        'server_name' => $params->{server_name}||hostname,
+        'tags'        => $params->{'tags'} || {},
+        'server_name' => $params->{server_name} || hostname,
         'modules'     => $params->{'modules'},
         'extra'       => $params->{'extra'} || {}
     };
