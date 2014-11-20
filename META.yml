@@ -28,4 +28,4 @@ requires:
   Mozilla::CA: 0
   IO::Socket::SSL: 0
   perl: 5.006
-version: 0.01
+version: 1.02
