@@ -6,7 +6,7 @@ Sentry::Log::Raven - sending exception log messages to Sentry.
 
 =cut
 
-our $VERSION = '1.02';
+our $VERSION = '1.03';
 
 
 =head1 SYNOPSIS
